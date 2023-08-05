@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --main-background: hsl(185, 75%, 39%);
+    --Headings: hsl(229, 23%, 23%);
+    --Labels: hsl(227, 10%, 46%);
+    --Line: hsl(0, 0%, 59%);
+    --stats-size: 1.125rem;
+    --font-family: 'Kumbh Sans', sans-serif;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+p,h1,h2,h3,h4,h5,h6{
+    overflow-wrap: break-word;
+}
+body{
+    background: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 40vw top -80vh, left 30vw top 50vh;
+    background-color: var(--main-background);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    background: white;
+    margin: 0 1.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+}
+.wrapper img{
+    width: 100%;
+    display: block;
+}
+.content{
+    position: relative;
+}
+.content img{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 5px solid white;
+}
+.profile__info{
+    line-height: 1.7rem;
+    padding: 4.5rem 0 1rem;
+    border-bottom: 1px solid hsla(0, 0%, 59%, 0.4);
+}
+.profile__info .name{
+    font-size: var(--stats-size);
+    color: var(--Headings);
+    font-weight: 700;
+}
+.profile__info .name span{
+    color: var(--Labels);
+    font-weight: 400;
+    margin-left: .4rem;
+}
+.profile__info .location{
+    font-size: .8rem;
+    color: var(--Labels);
+}
+.flexbox__stats{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+.flexbox__stats .stat{
+    line-height: 1.5rem;
+}
+.flexbox__stats .stat .number{
+    color: var(--Headings);
+    font-weight: 700;
+}
+.flexbox__stats .stat .label{
+    color: var(--Labels);
+    font-size: .65rem;
+    letter-spacing: .1rem;
+}
+@media screen and (min-width: 48rem){
+    body{
+        background-position: right 50vw top -70vh, left 50vw top 50vh;
+    }
+}
