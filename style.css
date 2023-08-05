@@ -79,6 +79,7 @@ body{
 }
 .flexbox__stats .stat .number{
     color: var(--Headings);
+    font-size: var(--stats-size)
     font-weight: 700;
 }
 .flexbox__stats .stat .label{
